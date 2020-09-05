@@ -18,11 +18,11 @@
     "require": {
         "php": ">=7.2.5",
         "psr/log": "~1.0",
-        "eliberty/symfony-amqp-messenger": "3.4-dev",
+        "eliberty/symfony-amqp-messenger": "3.4.x-dev",
         "symfony/deprecation-contracts": "^2.1",
-        "eliberty/symfony-doctrine-messenger": "3.4-dev",
+        "eliberty/symfony-doctrine-messenger": "3.4.x-dev",
         "symfony/polyfill-php80": "^1.15",
-        "eliberty/symfony-redis-messenger": "3.4-dev"
+        "eliberty/symfony-redis-messenger": "3.4.x-dev"
     },
     "require-dev": {
         "psr/cache": "~1.0",
