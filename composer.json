@@ -38,8 +38,8 @@
         "symfony/validator": "~3.4|^4.4|^5.0"
     },
     "conflict": {
-        "symfony/event-dispatcher": "<4.4",
-        "symfony/http-kernel": "<4.4"
+        "symfony/event-dispatcher": "<3.4",
+        "symfony/http-kernel": "<3.4"
     },
     "suggest": {
         "enqueue/messenger-adapter": "For using the php-enqueue library as a transport."
