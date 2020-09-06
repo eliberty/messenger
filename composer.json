@@ -23,7 +23,7 @@
         "eliberty/symfony-doctrine-messenger": "3.4.x-dev",
         "symfony/polyfill-php80": "^1.15",
         "eliberty/symfony-redis-messenger": "3.4.x-dev",
-        "eliberty/amazon-sqs-messenger": "3.4.1"
+        "eliberty/amazon-sqs-messenger": "3.4.x-dev"
     },
     "require-dev": {
         "psr/cache": "~1.0",
