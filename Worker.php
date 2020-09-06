@@ -49,7 +49,7 @@ class Worker
         $this->receivers = $receivers;
         $this->bus = $bus;
         $this->logger = $logger;
-        $this->eventDispatcher = class_exists(Event::class) ? LegacyEventDispatcherProxy::decorate($eventDispatcher) : $eventDispatcher;
+        $this->eventDispatcher = class_exists(LegacyEventDispatcherProxy::class) ? LegacyEventDispatcherProxy::decorate($eventDispatcher) : $eventDispatcher;
     }
 
     /**
@@ -157,6 +157,6 @@ class Worker
             return;
         }
 
-        $this->eventDispatcher->dispatch($event);
+        $this->eventDispatcher->dispatch(get_class($event), $event);
     }
 }
