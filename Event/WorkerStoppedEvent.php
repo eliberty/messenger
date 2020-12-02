@@ -11,6 +11,7 @@
 
 namespace Symfony\Component\Messenger\Event;
 
+use Symfony\Component\EventDispatcher\Event;
 use Symfony\Component\Messenger\Worker;
 
 /**
@@ -18,7 +19,7 @@ use Symfony\Component\Messenger\Worker;
  *
  * @author Robin Chalas <robin.chalas@gmail.com>
  */
-final class WorkerStoppedEvent
+final class WorkerStoppedEvent extends Event
 {
     private $worker;
 

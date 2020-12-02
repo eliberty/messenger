@@ -11,9 +11,10 @@
 
 namespace Symfony\Component\Messenger\Event;
 
+use Symfony\Component\EventDispatcher\Event;
 use Symfony\Component\Messenger\Envelope;
 
-abstract class AbstractWorkerMessageEvent
+abstract class AbstractWorkerMessageEvent extends Event
 {
     private $envelope;
     private $receiverName;
