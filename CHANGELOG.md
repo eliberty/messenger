@@ -1,10 +1,20 @@
 CHANGELOG
 =========
 
+5.3.0
+-----
+
+* `InMemoryTransport` can perform message serialization through dsn `in-memory://?serialize=true`.
+
 5.2.0
 -----
 
+* The `RedeliveryStamp` will no longer be populated with error data. This information is now stored in the `ErrorDetailsStamp` instead.
 * Added `FlattenExceptionNormalizer` to give more information about the exception on Messenger background processes. The `FlattenExceptionNormalizer` has a higher priority than `ProblemNormalizer` and it is only used when the Messenger serialization context is set.
+* Added factory methods `DelayStamp::delayFor(\DateInterval)` and `DelayStamp::delayUntil(\DateTimeInterface)`.
+* Removed the exception when dispatching a message with a `DispatchAfterCurrentBusStamp` and not in a context of another dispatch call
+* Added `WorkerMessageRetriedEvent`
+* Added `WorkerMessageReceivedEvent::setEnvelope()` and made event mutable
 
 5.1.0
 -----

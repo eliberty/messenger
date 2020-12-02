@@ -13,6 +13,7 @@ namespace Symfony\Component\Messenger\Event;
 
 use Symfony\Component\EventDispatcher\Event;
 use Symfony\Component\Messenger\Envelope;
+use Symfony\Component\Messenger\Stamp\StampInterface;
 
 abstract class AbstractWorkerMessageEvent extends Event
 {
@@ -36,5 +37,10 @@ abstract class AbstractWorkerMessageEvent extends Event
     public function getReceiverName(): string
     {
         return $this->receiverName;
+    }
+
+    public function addStamps(StampInterface ...$stamps): void
+    {
+        $this->envelope = $this->envelope->with(...$stamps);
     }
 }
